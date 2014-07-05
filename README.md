@@ -5,7 +5,7 @@ Example of Linear and Binary Search with Apples
 
 Linear search is an algorithm that sequentially checks every element one by one in a collection/list/array until it finds a match. 
 
-Binary has three main components, the upper-bound, lower-bound and mid. The collection/list/array must also be sorted. Binary will find the mid-points and  to see if a match is greater than or less than your apples. Once it has determined what half the match is in, the upper, lower and mid are redefined and the process starts over.
+Binary has three main components, the upper-bound, lower-bound and mid. The collection/list/array must also be sorted. Binary will find the mid-point and  to see if a match is greater than or less than your apple. Once it has determined what half the match is in, the upper, lower the mid is redefined and the process starts over.
 The power of Binary search is efficiency, unless the match is found in the first few elements of a collection Linear search will have to make more comparisons than Binary will.
 
 Say you had an apple with the diameter of 3 inches and you needed to find another apple with the exact same diameter in a bowl of apples each with a different diameter. 

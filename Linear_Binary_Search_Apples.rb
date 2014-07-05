@@ -67,7 +67,6 @@ puts
 
 puts Benchmark.measure { linear_search(apples, my_apple) }
 
-
 spacing
 
 puts "Doing a Binary Search for my_apple diameter of #{my_apple}"
