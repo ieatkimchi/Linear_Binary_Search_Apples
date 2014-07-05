@@ -47,7 +47,7 @@ end
 apples = [] #my bowl of apples
 
 10.times do 
-  apples << rand(1..15) #make an apple with a random diamter
+  apples << rand(1..15) #make an apple with a random diameter
 end
 
 spacing
