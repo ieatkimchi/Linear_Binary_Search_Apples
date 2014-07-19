@@ -1,6 +1,6 @@
 require 'benchmark'
 
-def linear_search(apples, my_apple)
+def linear_search apples, my_apple
   comparisons = 0
   apples.each do |apple|
     if apple == my_apple
@@ -13,7 +13,7 @@ def linear_search(apples, my_apple)
   return false
 end
 
-def binary_search(apples, my_apple)
+def binary_search apples, my_apple
   comparisons = 0
   apples.sort!
   lower_bound = 0
@@ -23,11 +23,11 @@ def binary_search(apples, my_apple)
   while lower_bound <= upper_bound
     mid_point = ((lower_bound + upper_bound) / 2).floor
     p apples.slice(lower_bound..upper_bound)
-    if my_apple < mid_point
+    if my_apple < apples[mid_point]
       upper_bound = mid_point - 1
       comparisons += 1
       puts
-    elsif my_apple > mid_point
+    elsif my_apple > apples[mid_point]
       lower_bound = mid_point + 1
       comparisons += 1
       puts
