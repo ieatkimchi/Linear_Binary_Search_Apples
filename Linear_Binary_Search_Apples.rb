@@ -4,38 +4,41 @@ def linear_search apples, my_apple
   comparisons = 0
   apples.each do |apple|
     if apple == my_apple
+      puts "Found it!"
       return true 
     else
       comparisons += 1
     end
     puts "Comparison #{comparisons}, apple of diameter #{apple}"
   end
+  puts "Yo! your apple ain't here"
   return false
 end
 
 def binary_search apples, my_apple
-  comparisons = 0
-  apples.sort!
-  lower_bound = 0
-  upper_bound = apples.size
-  # mid_point = ((lower_bound + upper_bound) / 2).floor
+  sorted_apples = apples.sort
+  lower_bound   = 0
+  upper_bound   = apples.size
+  comparisons   = 0
 
   while lower_bound <= upper_bound
     mid_point = ((lower_bound + upper_bound) / 2).floor
     p apples.slice(lower_bound..upper_bound)
-    if my_apple < apples[mid_point]
+    if my_apple < sorted_apples[mid_point]
       upper_bound = mid_point - 1
       comparisons += 1
       puts
-    elsif my_apple > apples[mid_point]
+    elsif my_apple > sorted_apples[mid_point]
       lower_bound = mid_point + 1
       comparisons += 1
       puts
     else
+      puts "Found it!"
       return true
     end
     puts "Comparison #{comparisons}"
   end
+  puts "Yo! your apple ain't here"
   return false
 end
 # driver code =================================================================
